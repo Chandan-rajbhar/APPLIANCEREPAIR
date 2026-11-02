@@ -17,7 +17,7 @@ export default function AppliancesGrid({ title, subtitle, showDirectLine = true 
             <span className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#EA580C] block mb-2">
               COMPREHENSIVE APPLIANCE REPAIR SERVICES
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-glossy-heading">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#173860]">
               {title || 'Appliances We Service'}
             </h2>
             <p className="text-sm sm:text-base text-slate-500 mt-2 max-w-2xl">
@@ -29,40 +29,42 @@ export default function AppliancesGrid({ title, subtitle, showDirectLine = true 
             <div>
               <a
                 href="tel:8772252046"
-                className="btn-glossy-secondary inline-flex items-center gap-2 px-5 py-2.5 sm:py-3 rounded-full text-[#173860] text-xs sm:text-sm font-semibold transition group"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#173860] hover:bg-[#122c4d] text-white text-xs sm:text-sm font-semibold shadow-md transition-all group"
               >
-                <Phone className="w-4 h-4 text-[#EA580C] transition-transform group-hover:rotate-12" />
+                <Phone className="w-4 h-4 text-[#F05A22] transition-transform group-hover:rotate-12" />
                 <span>Direct Line: (877) 225-2046</span>
               </a>
             </div>
           )}
         </div>
 
-        {/* 10 Appliance Cards Grid with Glassmorphic Panels */}
+        {/* 10 Appliance Cards Grid Matching Reference */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-5 lg:gap-6">
-          {APPLIANCES.map((app) => {
-            const IconComponent = app.icon;
-            return (
-              <div
-                key={app.id}
-                onClick={() => setSelectedAppliance(app)}
-                className="group glass-panel-interactive rounded-2xl p-5 sm:p-6 lg:p-7 cursor-pointer flex flex-col justify-between"
-              >
-                <div>
-                  {/* Glossy Orange Icon Container */}
-                  <div className="w-11 h-11 lg:w-12 lg:h-12 rounded-2xl bg-gradient-to-br from-[#FFF7ED] to-[#FFEDD5] text-[#EA580C] border border-orange-200/60 flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-[#F05A22] group-hover:to-[#EA580C] group-hover:text-white transition-all duration-300 shadow-xs group-hover:shadow-[0_4px_15px_rgba(234,88,12,0.35)]">
-                    <IconComponent className="w-5 h-5 lg:w-6 lg:h-6" />
-                  </div>
-                  <h3 className="font-bold text-[#173860] text-sm sm:text-base lg:text-lg group-hover:text-[#EA580C] transition-colors">
-                    {app.name}
-                  </h3>
-                  <p className="text-xs sm:text-[13px] text-slate-500 mt-1.5 leading-snug">
-                    {app.desc}
-                  </p>
+          {APPLIANCES.map((app) => (
+            <div
+              key={app.id}
+              onClick={() => setSelectedAppliance(app)}
+              className="group bg-white/90 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-slate-200/70 shadow-xs hover:shadow-lg hover:border-orange-200 transition-all duration-300 cursor-pointer flex flex-col justify-between"
+            >
+              <div>
+                {/* 3D Realistic Appliance Illustration in Soft Peach Container */}
+                <div className="w-14 h-14 rounded-2xl bg-[#FFF6EE] border border-[#FFE7D6] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-105 shadow-xs">
+                  <img
+                    src={app.image}
+                    alt={app.name}
+                    className="w-10 h-10 object-contain drop-shadow-xs"
+                    loading="lazy"
+                  />
                 </div>
+                <h3 className="font-bold text-[#173860] text-sm sm:text-base group-hover:text-[#EA580C] transition-colors">
+                  {app.name}
+                </h3>
+                <p className="text-xs sm:text-[13px] text-slate-500 mt-1 leading-snug">
+                  {app.desc}
+                </p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -73,13 +75,18 @@ export default function AppliancesGrid({ title, subtitle, showDirectLine = true 
             <button
               onClick={() => setSelectedAppliance(null)}
               className="absolute top-5 right-5 text-slate-400 hover:text-[#173860] p-1.5 rounded-full hover:bg-white/60 transition"
+              aria-label="Close modal"
             >
               <X className="w-5 h-5" />
             </button>
 
             <div className="flex items-center gap-4 mb-5">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FFF7ED] to-[#FFEDD5] border border-orange-200/80 text-[#EA580C] flex items-center justify-center shrink-0 shadow-inner">
-                <selectedAppliance.icon className="w-7 h-7" />
+              <div className="w-14 h-14 rounded-2xl bg-[#FFF6EE] border border-[#FFE7D6] flex items-center justify-center shrink-0 shadow-xs">
+                <img
+                  src={selectedAppliance.image}
+                  alt={selectedAppliance.name}
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#EA580C]">

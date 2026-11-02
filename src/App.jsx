@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import MobileBottomNav from './components/MobileBottomNav';
 
 import OverviewPage from './pages/OverviewPage';
 import ServicesPage from './pages/ServicesPage';
@@ -14,12 +15,12 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-white font-sans text-[#173860] antialiased selection:bg-orange-500 selection:text-white">
+      <div className="min-h-screen flex flex-col bg-white font-sans text-[#173860] antialiased selection:bg-orange-500 selection:text-white overflow-x-hidden">
         {/* Persistent Navbar across all routes */}
         <Navbar />
 
         {/* Dynamic Route Content */}
-        <main className="flex-1">
+        <main className="flex-1 pb-16 md:pb-0">
           <Routes>
             <Route path="/" element={<OverviewPage />} />
             <Route path="/overview" element={<Navigate to="/" replace />} />
@@ -32,8 +33,13 @@ export default function App() {
           </Routes>
         </main>
 
-        {/* Persistent Footer across all routes */}
-        <Footer />
+        {/* Persistent Footer across all routes (Hidden on Mobile) */}
+        <div className="hidden md:block">
+          <Footer />
+        </div>
+
+        {/* Dedicated Fixed Mobile Bottom Navigation Bar (Hidden on md+ screens) */}
+        <MobileBottomNav />
       </div>
     </BrowserRouter>
   );

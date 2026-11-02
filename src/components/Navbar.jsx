@@ -14,7 +14,10 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 glass-navbar">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-18 sm:h-20">
+        {/* ========================================================= */}
+        {/* DESKTOP HEADER (100% Intact & Untouched for md+ Screens) */}
+        {/* ========================================================= */}
+        <div className="hidden md:flex items-center justify-between h-18 sm:h-20">
           {/* Logo with glass container */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2.5 group">
@@ -62,6 +65,38 @@ export default function Navbar() {
             >
               <Phone className="w-4 h-4 fill-current" />
               <span>Call Now: (877) 225-2046</span>
+            </a>
+          </div>
+        </div>
+
+        {/* ========================================================= */}
+        {/* MOBILE HEADER (Modern App Top Bar for < md Screens)      */}
+        {/* ========================================================= */}
+        <div className="flex md:hidden items-center justify-between h-16">
+          {/* Mobile Logo */}
+          <Link to="/" className="flex items-center gap-2 shrink-0">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-white/20 to-white/5 border border-white/25 flex items-center justify-center text-white shadow-inner backdrop-blur-md">
+              <Wrench className="w-4 h-4 text-orange-400" />
+            </div>
+            <span className="font-extrabold tracking-wide text-xs text-white font-mono">
+              APEX REPAIR
+            </span>
+          </Link>
+
+          {/* Right Action Items: 24/7 Pulse Badge + Compact Call Button */}
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-bold text-emerald-300 backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>24/7 LIVE</span>
+            </div>
+
+            <a
+              href="tel:8772252046"
+              className="btn-glossy-primary px-3 py-1.5 rounded-full text-white text-xs font-bold flex items-center gap-1 shadow-sm shrink-0"
+              aria-label="Call Now"
+            >
+              <Phone className="w-3 h-3 fill-current" />
+              <span>Call</span>
             </a>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { Wrench, ShieldCheck, ChevronRight } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#132C4A] via-[#10243E] to-[#0A1728] text-slate-300 pt-16 pb-10 border-t border-[#204A7A]/50">
+    <footer className="bg-gradient-to-b from-[#132C4A] via-[#10243E] to-[#0A1728] text-slate-300 pt-16 pb-24 md:pb-10 border-t border-[#204A7A]/50">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 xl:gap-14 mb-14">
           {/* Col 1 */}

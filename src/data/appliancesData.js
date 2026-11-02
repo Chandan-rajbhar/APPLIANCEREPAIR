@@ -15,11 +15,23 @@ import {
   ShieldCheck
 } from 'lucide-react';
 
+import washersImg from '../assets/appliances/washers.png';
+import dryersImg from '../assets/appliances/dryers.png';
+import refrigeratorsImg from '../assets/appliances/refrigerators.png';
+import freezersImg from '../assets/appliances/freezers.png';
+import dishwashersImg from '../assets/appliances/dishwashers.png';
+import ovensImg from '../assets/appliances/ovens.png';
+import microwavesImg from '../assets/appliances/microwaves.png';
+import disposalsImg from '../assets/appliances/disposals.png';
+import icemakersImg from '../assets/appliances/icemakers.png';
+import winecoolersImg from '../assets/appliances/winecoolers.png';
+
 export const APPLIANCES = [
   {
     id: 'washers',
     name: 'Washers',
     desc: 'Washing machine diagnosis & fix',
+    image: washersImg,
     icon: Waves,
     tag: 'Laundry Care',
     details: 'Fixing drum imbalance, drainage failure, spin cycle stalls, water intake errors, and electronic control board malfunctions across all major front-load and top-load brands.'
@@ -27,7 +39,8 @@ export const APPLIANCES = [
   {
     id: 'dryers',
     name: 'Dryers',
-    desc: 'Spinning and heating issues solved',
+    desc: 'Servicing and heating issue repairs',
+    image: dryersImg,
     icon: Wind,
     tag: 'Laundry Care',
     details: 'Restoring faulty thermal fuses, blown heating elements, snapped drive belts, worn drum rollers, and squeaking pulleys for both gas and electric dryers.'
@@ -35,7 +48,8 @@ export const APPLIANCES = [
   {
     id: 'refrigerators',
     name: 'Refrigerators',
-    desc: 'Cooling, leaking & compressor repair',
+    desc: 'Cooling, leaks & compressor repair',
+    image: refrigeratorsImg,
     icon: Refrigerator,
     tag: 'Cooling',
     details: 'Troubleshooting clicking start relays, silent compressor failures, evaporator coil freezing, door gasket seal breaches, and smart inverter system diagnostics.'
@@ -44,6 +58,7 @@ export const APPLIANCES = [
     id: 'freezers',
     name: 'Freezers',
     desc: 'Defrost & thermostat issues',
+    image: freezersImg,
     icon: Snowflake,
     tag: 'Cooling',
     details: 'Expert resolution of frost buildup, defrost sensor failures, erratic sub-zero temperatures, and sudden cooling loss on upright and chest freezers.'
@@ -52,6 +67,7 @@ export const APPLIANCES = [
     id: 'dishwashers',
     name: 'Dishwashers',
     desc: 'Leaks, drainage & pump repair',
+    image: dishwashersImg,
     icon: Disc,
     tag: 'Kitchen Care',
     details: 'Eliminating standing water in tubs, replacing circulation impellers, clearing spray arm blockages, and installing OEM water inlet valves to stop leaks.'
@@ -60,6 +76,7 @@ export const APPLIANCES = [
     id: 'ovens',
     name: 'Ovens & Ranges',
     desc: 'Igniters & heating elements',
+    image: ovensImg,
     icon: Flame,
     tag: 'Kitchen Care',
     details: 'Calibrating broil and bake elements, replacing weak glow-bar igniters, fixing surface burners that click continuously, and testing digital control boards.'
@@ -67,7 +84,8 @@ export const APPLIANCES = [
   {
     id: 'microwaves',
     name: 'Microwaves',
-    desc: 'Magnetron & electrical repair',
+    desc: 'Magnetron & electrical repairs',
+    image: microwavesImg,
     icon: Microwave,
     tag: 'Kitchen Care',
     details: 'Repairing door safety interlocks, burnt high-voltage diodes, magnetrons with zero heating output, and unresponsive capacitive touch control panels.'
@@ -76,6 +94,7 @@ export const APPLIANCES = [
     id: 'disposals',
     name: 'Disposals',
     desc: 'Jams & motor replacement',
+    image: disposalsImg,
     icon: Trash2,
     tag: 'Kitchen Care',
     details: 'Safely clearing jammed shredder rings, replacing burnt-out under-sink induction motors, repairing flange leaks, and testing pneumatic switches.'
@@ -84,6 +103,7 @@ export const APPLIANCES = [
     id: 'icemakers',
     name: 'Ice Makers',
     desc: 'Water line & motor replacement',
+    image: icemakersImg,
     icon: Snowflake,
     tag: 'Cooling',
     details: 'Fixing frozen fill tubes, replacing ejector gear motors, solving hollow or misshapen ice cubes, and testing dual solenoid inlet valves.'
@@ -92,6 +112,7 @@ export const APPLIANCES = [
     id: 'winecoolers',
     name: 'Wine Coolers',
     desc: 'Precise temperature restoring',
+    image: winecoolersImg,
     icon: Wine,
     tag: 'Cooling',
     details: 'Dual-zone electronic thermostat calibration, thermoelectric peltier chip repair, whisper-quiet fan replacements, and humidity stabilization.'
@@ -135,4 +156,3 @@ export const HOW_IT_WORKS_STEPS = [
     link: 'Guaranteed Satisfaction'
   }
 ];
-
