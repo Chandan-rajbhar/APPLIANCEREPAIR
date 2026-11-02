@@ -14,7 +14,7 @@ import {
   X
 } from 'lucide-react';
 import { APPLIANCES } from '../data/appliancesData';
-import technicianHeroImg from '../assets/technician-hero.png';
+import technicianHeroImg from '../assets/technician-hero-clean.png';
 
 export default function MobileHomeView() {
   const [selectedAppliance, setSelectedAppliance] = useState(null);
@@ -51,12 +51,12 @@ export default function MobileHomeView() {
           <span>Same-Day Dispatch • Certified Techs</span>
         </div>
 
-        {/* Technician Visual Showcase with Floating Social Proof (Reduced height ~30%) */}
-        <div className="relative rounded-xl overflow-hidden mb-3 h-32 sm:h-36 bg-slate-900 shadow-sm">
+        {/* Technician Visual Showcase with Floating Social Proof */}
+        <div className="relative rounded-xl overflow-hidden mb-3 h-44 sm:h-48 bg-slate-900 shadow-sm">
           <img
             src={technicianHeroImg}
             alt="Appliance Repair Expert"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[center_32%]"
           />
           {/* Subtle gradient shade */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 pointer-events-none" />
@@ -228,12 +228,12 @@ export default function MobileHomeView() {
                     </span>
                   </div>
 
-                  {/* 3D Realistic Appliance Illustration in Soft Peach Box */}
-                  <div className="w-12 h-12 rounded-2xl bg-[#FFF6EE] border border-[#FFE7D6] flex items-center justify-center mx-auto my-2 shadow-xs">
+                  {/* Realistic Commercial Appliance Product Image */}
+                  <div className="w-full h-24 sm:h-28 rounded-xl bg-slate-50 border border-slate-100/80 flex items-center justify-center p-1.5 my-2 overflow-hidden">
                     <img
                       src={app.image}
                       alt={app.name}
-                      className="w-8 h-8 object-contain drop-shadow-xs"
+                      className="w-full h-full object-contain drop-shadow-sm transition-transform duration-300 hover:scale-105"
                       loading="lazy"
                     />
                   </div>
@@ -283,11 +283,11 @@ export default function MobileHomeView() {
             </button>
 
             <div className="flex items-center gap-3.5 mb-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#FFF6EE] border border-[#FFE7D6] flex items-center justify-center shrink-0 shadow-xs">
+              <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center p-1.5 shrink-0 shadow-xs">
                 <img
                   src={selectedAppliance.image}
                   alt={selectedAppliance.name}
-                  className="w-8 h-8 object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>

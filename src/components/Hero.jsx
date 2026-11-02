@@ -1,7 +1,7 @@
 import React from 'react';
-import { Phone, CheckCircle2, Clock, Star, ArrowRight } from 'lucide-react';
+import { Phone, CheckCircle2, ArrowRight } from 'lucide-react';
 import StatsCards from './StatsCards';
-import technicianHeroImg from '../assets/technician-hero.png';
+import technicianHeroImg from '../assets/technician-hero-clean.png';
 
 export default function Hero() {
   return (
@@ -102,36 +102,6 @@ export default function Hero() {
 
                 {/* Glass Reflection Gradient Across Image */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/25 via-transparent to-white/10 pointer-events-none" />
-
-                {/* Overlay Badge 1: Top-Left Ratings Glass Card */}
-                <div className="absolute top-0 left-0 glass-badge rounded-br-2xl rounded-tl-2xl px-4 py-3 border-r border-b border-white/80 flex flex-col min-w-[165px]">
-                  <div className="flex items-center gap-1 text-[#EA580C]">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current drop-shadow-xs" />
-                    ))}
-                  </div>
-                  <div className="text-sm sm:text-base font-extrabold text-[#173860] mt-1 leading-tight">
-                    4.9 / 5.0 Rating
-                  </div>
-                  <div className="text-xs text-slate-500 font-medium">
-                    From 15,000+ customers
-                  </div>
-                </div>
-
-                {/* Overlay Badge 2: Bottom-Right Fast Service Glass Card */}
-                <div className="absolute bottom-0 right-0 glass-badge rounded-tl-2xl rounded-br-2xl px-4.5 py-3 border-l border-t border-white/80 flex items-center gap-3 min-w-[175px]">
-                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-orange-100 to-amber-100 text-[#EA580C] flex items-center justify-center shrink-0 shadow-inner">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-sm sm:text-base font-extrabold text-[#173860] leading-tight">
-                      Same-day service
-                    </div>
-                    <div className="text-xs text-slate-500 font-medium">
-                      Available 24/7 Dispatch
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

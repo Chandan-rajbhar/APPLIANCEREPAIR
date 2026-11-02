@@ -47,12 +47,12 @@ export default function AppliancesGrid({ title, subtitle, showDirectLine = true 
               className="group bg-white/90 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-slate-200/70 shadow-xs hover:shadow-lg hover:border-orange-200 transition-all duration-300 cursor-pointer flex flex-col justify-between"
             >
               <div>
-                {/* 3D Realistic Appliance Illustration in Soft Peach Container */}
-                <div className="w-14 h-14 rounded-2xl bg-[#FFF6EE] border border-[#FFE7D6] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-105 shadow-xs">
+                {/* Commercial Product Photography */}
+                <div className="w-full h-36 sm:h-40 rounded-xl bg-slate-50 border border-slate-100/90 flex items-center justify-center p-3 mb-4 overflow-hidden group-hover:bg-white group-hover:shadow-sm transition-all">
                   <img
                     src={app.image}
                     alt={app.name}
-                    className="w-10 h-10 object-contain drop-shadow-xs"
+                    className="w-full h-full object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
@@ -81,11 +81,11 @@ export default function AppliancesGrid({ title, subtitle, showDirectLine = true 
             </button>
 
             <div className="flex items-center gap-4 mb-5">
-              <div className="w-14 h-14 rounded-2xl bg-[#FFF6EE] border border-[#FFE7D6] flex items-center justify-center shrink-0 shadow-xs">
+              <div className="w-20 h-20 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center p-2 shrink-0 shadow-xs">
                 <img
                   src={selectedAppliance.image}
                   alt={selectedAppliance.name}
-                  className="w-10 h-10 object-contain"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div>
